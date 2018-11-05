@@ -16,3 +16,6 @@ commonSourcePackages += "common"
 courseId := "bRPXgjY9EeW6RApRXdjJPw"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.1"
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.1" % "test"
