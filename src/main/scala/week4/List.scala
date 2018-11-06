@@ -1,6 +1,5 @@
 package week4
 
-import org.omg.CosNaming.NamingContextPackage.NotEmpty
 
 trait List[+T] {
   def isEmpty: Boolean
@@ -51,4 +50,9 @@ object List {
 
 object test {
   val x: List[String] = Nil
+
+  def insert(x: Int, xs: scala.List[Int]): scala.List[Int] = xs match {
+    case scala.List() => scala.List(x)
+    case y :: ys => if (x <= y) x :: xs else y :: insert(x, ys)
+  }
 }
