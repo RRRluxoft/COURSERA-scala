@@ -47,5 +47,15 @@ object listfun {
 
   encode(data)
 
+  def sum(xs: List[Int]) = // (xs foldLeft 0)(_ + _)
+//    (0 :: xs) reduceLeft((x, y) => x + y)
+//  (0 :: xs) reduceLeft (_ + _)
+    (xs foldLeft 0)(_ + _)
+
+  def product(xs: List[Int]) = (xs foldLeft 1)(_ * _)
+
+  def concat[T](xs: List[T], ys: List[T]): List[T] = {
+    (xs foldRight ys)(_ :: _)
+  }
 
 }
