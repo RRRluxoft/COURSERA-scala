@@ -1,3 +1,4 @@
+package week6
 
 object test {
   val xs = Array(2, 6, -4, 7)
@@ -8,4 +9,11 @@ object test {
   isPrime(n)
   isPrime(8)
   isPrime(2)
+
+  val s = "Hello Scala"
+  s filter(c => c.isUpper)
+
+  val r: Range = 1 until 10
+  val r2: Range = 1 to -5 by -2
+
 }
