@@ -6,7 +6,14 @@ object polynomials {
 
     val terms = terms0 withDefaultValue 0.0
 
-    def + (other: Poly) = new Poly(terms ++ (other.terms map adjust))
+    def + (other: Poly) = new Poly(  //terms ++ (other.terms map adjust))
+      (other.terms foldLeft terms)(addTerm)
+    )
+
+    def addTerm(terms: Map[Int, Double], term: (Int, Double)): Map[Int, Double] = {
+      val (exp, coeff) = term
+      terms + (exp -> (coeff + terms(exp)))
+    }
 
     def adjust(term: (Int, Double)): (Int, Double) = {
       val (exp, coeff) = term
