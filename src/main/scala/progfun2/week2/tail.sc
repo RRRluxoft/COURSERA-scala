@@ -9,8 +9,8 @@ object tail {
     l => k(n :: l)
   )
 
-  var t = list1(2)(identity)
+  val t = list1(1000)(identity)
 
-  list1(2)(t)
+  println (list1(2)(t))
 
 }
