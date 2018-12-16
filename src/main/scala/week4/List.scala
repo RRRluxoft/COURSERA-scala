@@ -11,7 +11,7 @@ trait List[+T] {
 
 class Cons[T](val head: T, val tail: List[T]) extends List[T] {
   def isEmpty = false
-  def singleton[T](elem: T) = new Cons[T](elem, Nil[T])
+  def singleton[T](elem: T) = new Cons[T](elem, Nil)
 
   def nth[T](n: Int, xs: List[T]): T = {
     if (xs.isEmpty) throw new IndexOutOfBoundsException("Empty list")

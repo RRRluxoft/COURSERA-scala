@@ -29,12 +29,12 @@ class Pouring(capacity: Vector[Int]) {
     }
   }
 
-  val glaesse = 0 until capacity.length
+  val glasses = 0 until capacity.length
 
   val moves =
-    (for (g <- glaesse) yield Empty(g)) ++
-      (for (g <- glaesse) yield Fill(g)) ++
-      (for (from <- glaesse; to <- glaesse if from != to) yield Pour(from, to))
+    (for (g <- glasses) yield Empty(g)) ++
+      (for (g <- glasses) yield Fill(g)) ++
+      (for (from <- glasses; to <- glasses if from != to) yield Pour(from, to))
 
 
   //  Paths
