@@ -1,4 +1,4 @@
-import progfun2.week4.Var
+import progfun2.week4.frp.Var
 //package progfun2.week4
 
 class BankAccount /*extends Publisher*/ {

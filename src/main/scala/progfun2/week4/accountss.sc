@@ -1,10 +1,8 @@
-import progfun2.week4.{Signal, Var}
+import progfun2.week4.frp.{Signal, Var}
 
 object accountss {
 
-  def Signal(sum: Var) = ???
-
-  def consolidated(accts: List[BankAccount]): Signal[Int] =
+  def consolidated(accts: List[BankAccount]): Signal[Var[Int]] =
     Signal(accts.map(_.balance).sum)
 
   val a = new BankAccount
