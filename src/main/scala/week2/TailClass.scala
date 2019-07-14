@@ -26,7 +26,7 @@ object TailClass extends App {
   }
 
   println(tailrecSimple(10))
-  println(tailFunc(10))
-  println(factorial2(10))
+  println(tailFunc(10).result)
+  println(factorial2(10).result)
 
 }
